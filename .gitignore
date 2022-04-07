@@ -349,4 +349,4 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-strapi/docker-compose.yaml
+.docker-compose.yaml
