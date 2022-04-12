@@ -32,7 +32,7 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-docker-compose.yaml
+**docker-compose.yaml
 
 ############################
 # Packages
