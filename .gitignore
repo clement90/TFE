@@ -1,3 +1,5 @@
+docker-compose.yml
+
 ############################
 # OS X
 ############################
@@ -31,8 +33,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-
-*docker-compose.yaml
 
 ############################
 # Packages
