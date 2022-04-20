@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guitars",
+  "info": {
+    "singularName": "guitar",
+    "pluralName": "guitars",
+    "displayName": "guitars",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "Year": {
+      "type": "integer",
+      "min": 1800,
+      "default": 1920
+    },
+    "model_id": {
+      "type": "integer"
+    },
+    "producer_id": {
+      "type": "integer"
+    },
+    "create_at": {
+      "type": "datetime"
+    },
+    "update_at": {
+      "type": "datetime"
+    },
+    "create_by": {
+      "type": "integer"
+    },
+    "update_by": {
+      "type": "integer"
+    },
+    "deleted": {
+      "type": "boolean"
+    }
+  }
+}
