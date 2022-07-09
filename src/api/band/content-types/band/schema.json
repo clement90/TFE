@@ -4,7 +4,8 @@
   "info": {
     "singularName": "band",
     "pluralName": "bands",
-    "displayName": "Bands"
+    "displayName": "Bands",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -37,6 +38,18 @@
     },
     "deleted": {
       "type": "boolean"
+    },
+    "artists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artist.artist",
+      "mappedBy": "band_id"
+    },
+    "albums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::album.album",
+      "mappedBy": "band"
     }
   }
 }

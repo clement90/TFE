@@ -4,7 +4,8 @@
   "info": {
     "singularName": "producer",
     "pluralName": "producers",
-    "displayName": "Producers"
+    "displayName": "Producers",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -34,6 +35,12 @@
     },
     "deleted": {
       "type": "boolean"
+    },
+    "guitars": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::guitar.guitar",
+      "mappedBy": "producer"
     }
   }
 }

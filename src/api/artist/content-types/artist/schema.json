@@ -4,7 +4,8 @@
   "info": {
     "singularName": "artist",
     "pluralName": "artists",
-    "displayName": "Artists"
+    "displayName": "Artists",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,9 +17,6 @@
     },
     "first_name": {
       "type": "string"
-    },
-    "band_id": {
-      "type": "integer"
     },
     "create_at": {
       "type": "date"
@@ -34,6 +32,24 @@
     },
     "deleted": {
       "type": "boolean"
+    },
+    "band_id": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::band.band",
+      "inversedBy": "artists"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "guitar_id": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::guitar.guitar",
+      "mappedBy": "artists"
+    },
+    "birthday": {
+      "type": "date"
     }
   }
 }

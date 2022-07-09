@@ -68,6 +68,16 @@
     },
     "first_name": {
       "type": "string"
+    },
+    "admin": {
+      "type": "boolean",
+      "default": false
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "author"
     }
   }
 }

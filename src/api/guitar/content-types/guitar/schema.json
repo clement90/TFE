@@ -15,7 +15,7 @@
     "name": {
       "type": "string"
     },
-    "Year": {
+    "year": {
       "type": "integer",
       "min": 1800,
       "default": 1920
@@ -26,12 +26,6 @@
     "producer_id": {
       "type": "integer"
     },
-    "create_at": {
-      "type": "datetime"
-    },
-    "update_at": {
-      "type": "datetime"
-    },
     "create_by": {
       "type": "integer"
     },
@@ -40,6 +34,18 @@
     },
     "deleted": {
       "type": "boolean"
+    },
+    "artists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artist.artist",
+      "inversedBy": "guitar_id"
+    },
+    "producer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::producer.producer",
+      "inversedBy": "guitars"
     }
   }
 }

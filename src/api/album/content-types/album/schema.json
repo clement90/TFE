@@ -4,7 +4,8 @@
   "info": {
     "singularName": "album",
     "pluralName": "albums",
-    "displayName": "albums"
+    "displayName": "albums",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,23 +18,23 @@
     "year": {
       "type": "date"
     },
-    "artist_id": {
-      "type": "integer"
-    },
-    "create_at": {
-      "type": "datetime"
-    },
     "create_by": {
       "type": "integer"
-    },
-    "update_at": {
-      "type": "datetime"
     },
     "update_by": {
       "type": "integer"
     },
     "deleted": {
       "type": "boolean"
+    },
+    "band": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::band.band",
+      "inversedBy": "albums"
+    },
+    "songs": {
+      "type": "richtext"
     }
   }
 }
